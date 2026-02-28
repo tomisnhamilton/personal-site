@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Grouping posts by year for a clean archive look
+const years = [
+    ...new Set(allPosts.map((post) => post.data.pubDate.getFullYear())),
+];
+---
+
+<BaseLayout title="Writing | Archive">
+    <header class="mt-16 mb-20">
+        <h1 class="text-3xl font-bold text-zinc-100 mb-4">Archive</h1>
+        <p class="text-zinc-500 max-w-lg">
+            Collected thoughts on systems, education, and the personal journey.
+        </p>
+    </header>
+
+    <div class="space-y-16">
+        {
+            years.map((year) => (
+                <section class="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-4 md:gap-12">
+                    <h2 class="text-sm font-mono text-gold/50 sticky top-12 h-fit">
+                        {year}
+                    </h2>
+                    <div class="space-y-8">
+                        {allPosts
+                            .filter(
+                                (post) =>
+                                    post.data.pubDate.getFullYear() === year,
+                            )
+                            .map((post) => (
+                                <a
+                                    href={`/blog/${post.slug}`}
+                                    class="group block"
+                                >
+                                    <div class="flex flex-col mb-1">
+                                        <h3 class="text-lg text-zinc-200 group-hover:text-gold transition-colors font-medium">
+                                            {post.data.title}
+                                        </h3>
+                                        <time class="text-[10px] uppercase tracking-widest text-zinc-600">
+                                            {post.data.pubDate.toLocaleDateString(
+                                                "en-us",
+                                                {
+                                                    month: "short",
+                                                    day: "numeric",
+                                                },
+                                            )}
+                                        </time>
+                                    </div>
+                                </a>
+                            ))}
+                    </div>
+                </section>
+            ))
+        }
+    </div>
+</BaseLayout>

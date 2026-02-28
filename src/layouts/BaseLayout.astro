@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body class="max-w-2xl mx-auto px-6 py-12 selection:bg-gold/30">
+        <nav class="flex justify-between mb-20 text-sm">
+            <a href="/" class="text-gold font-bold tracking-tighter">JR.</a>
+            <div class="space-x-6">
+                <a href="/blog" class="hover:text-gold transition-colors"
+                    >Writing</a
+                >
+                <a href="/resume" class="hover:text-gold transition-colors"
+                    >Resume</a
+                >
+            </div>
+        </nav>
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>

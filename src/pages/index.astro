@@ -1,17 +1,140 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
+// Fetch the 3 most recent blog posts for the homepage
+const posts = (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
+
+// This variable pulls from your .env file to toggle the view
+const isMaintenance = import.meta.env.PUBLIC_MAINTENANCE_MODE === "true";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+{
+    isMaintenance ? (
+        <BaseLayout title="Coming Soon">
+            <div class="h-[60vh] flex flex-col justify-center items-center text-center">
+                <div class="w-12 h-12 border-2 border-gold rounded-full mb-8 animate-pulse" />
+                <h1 class="text-2xl font-medium text-zinc-100 mb-4 tracking-tight">
+                    Synthesis in progress.
+                </h1>
+                <p class="text-zinc-500 max-w-xs text-sm leading-relaxed">
+                    Building a holistic digital home for my work and life.
+                    Launching March 2026.
+                </p>
+                <div class="mt-12 text-[10px] font-mono text-gold/50 uppercase tracking-[0.3em]">
+                    2026 — J.R. Portfolio
+                </div>
+            </div>
+        </BaseLayout>
+    ) : (
+        <BaseLayout title="Home | Portfolio">
+            <section class="mt-16 mb-24">
+                <h1 class="text-4xl font-semibold mb-6 tracking-tight text-zinc-100">
+                    A synthesis of [Education Major], [Current Career], and{" "}
+                    <span class="text-gold">Life.</span>
+                </h1>
+                <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl">
+                    My journey began in the halls of [University], studying
+                    [Field], which shaped how I view the world. Professionally,
+                    I build high-performance systems, but personally, I am
+                    driven by [Life Interest/Philosophy]. This site is where
+                    those paths converge.
+                </p>
+            </section>
+
+            <section>
+                <div class="flex items-baseline justify-between mb-10 border-b border-zinc-800 pb-2">
+                    <h2 class="text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                        Latest Writing
+                    </h2>
+                    <a
+                        href="/blog"
+                        class="text-xs text-zinc-500 hover:text-gold transition-colors underline underline-offset-4 decoration-zinc-700"
+                    >
+                        View All
+                    </a>
+                </div>
+
+                <div class="space-y-12">
+                    {posts.length > 0 ? (
+                        posts.map((post) => (
+                            <article class="group relative">
+                                <a href={`/blog/${post.slug}`} class="block">
+                                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
+                                        <h3 class="text-xl text-zinc-200 group-hover:text-gold transition-colors font-medium">
+                                            {post.data.title}
+                                        </h3>
+                                        <time class="text-zinc-600 font-mono text-xs uppercase tracking-widest">
+                                            {post.data.pubDate.toLocaleDateString(
+                                                "en-us",
+                                                {
+                                                    month: "short",
+                                                    day: "numeric",
+                                                    year: "numeric",
+                                                },
+                                            )}
+                                        </time>
+                                    </div>
+                                    <p class="text-sm text-zinc-500 max-w-2xl line-clamp-2 leading-relaxed">
+                                        {post.data.description ||
+                                            "Click to read the full story..."}
+                                    </p>
+                                </a>
+                            </article>
+                        ))
+                    ) : (
+                        <p class="text-zinc-600 italic">
+                            Writing something special. Coming soon.
+                        </p>
+                    )}
+                </div>
+            </section>
+
+            <section class="mt-32">
+                <div class="flex items-baseline justify-between mb-12 border-b border-zinc-800 pb-2">
+                    <h2 class="text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                        Selected Projects
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[16/10] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group-hover:border-gold/30 transition-all">
+                            <div class="w-full h-full bg-gradient-to-br from-gold/10 to-transparent flex items-center justify-center text-zinc-700 font-mono text-xs uppercase tracking-widest">
+                                [Project Preview]
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg text-zinc-100 font-medium group-hover:text-gold transition-colors">
+                                Aether OS
+                            </h3>
+                            <p class="text-zinc-500 text-sm mt-2 leading-relaxed">
+                                A distributed operating system built for the
+                                edge, focusing on zero-latency sync.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer md:mt-24">
+                        <div class="aspect-[16/10] bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group-hover:border-gold/30 transition-all">
+                            <div class="w-full h-full bg-gradient-to-tr from-gold/10 to-transparent flex items-center justify-center text-zinc-700 font-mono text-xs uppercase tracking-widest">
+                                [Project Preview]
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg text-zinc-100 font-medium group-hover:text-gold transition-colors">
+                                Lumina Design
+                            </h3>
+                            <p class="text-zinc-500 text-sm mt-2 leading-relaxed">
+                                A design system architecture used by 50+
+                                enterprise teams in 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </BaseLayout>
+    )
+}
