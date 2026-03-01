@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <BaseLayout title="T.N. Hamilton | Résumé">
@@ -11,27 +12,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                     Contact
                 </h2>
-                <ul class="text-sm space-y-3 text-zinc-400">
+                <ul class="text-sm space-y-4 text-zinc-400">
                     <li>
                         <a
                             href="mailto:tomisnhamilton@gmail.com"
-                            class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >Email</a
+                            class="group flex items-center gap-3 hover:text-gold transition-colors"
                         >
+                            <Icon
+                                name="lucide:mail"
+                                class="w-4 h-4 text-zinc-500 group-hover:text-gold transition-colors"
+                            />
+                            <span class="border-b border-zinc-800 pb-0.5"
+                                >Email</span
+                            >
+                        </a>
                     </li>
                     <li>
                         <a
                             href="https://www.linkedin.com/in/tomis-hamilton-428b471a8"
-                            class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >LinkedIn</a
+                            target="_blank"
+                            class="group flex items-center gap-3 hover:text-gold transition-colors"
                         >
+                            <Icon
+                                name="simple-icons:linkedin"
+                                class="w-4 h-4 text-zinc-500 group-hover:text-gold transition-colors"
+                            />
+                            <span class="border-b border-zinc-800 pb-0.5"
+                                >LinkedIn</span
+                            >
+                        </a>
                     </li>
                     <li>
                         <a
                             href="https://github.com/tomisnhamilton"
-                            class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >GitHub</a
+                            target="_blank"
+                            class="group flex items-center gap-3 hover:text-gold transition-colors"
                         >
+                            <Icon
+                                name="simple-icons:github"
+                                class="w-4 h-4 text-zinc-500 group-hover:text-gold transition-colors"
+                            />
+                            <span class="border-b border-zinc-800 pb-0.5"
+                                >GitHub</span
+                            >
+                        </a>
                     </li>
                 </ul>
             </section>
