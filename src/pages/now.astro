@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// This page reflects your current "Synthesis"
+const lastUpdated = "February 2026";
+---
+
+<BaseLayout title="Now | J.R.">
+    <article class="mt-16 mb-24">
+        <header class="mb-12">
+            <h1
+                class="text-4xl font-semibold mb-2 tracking-tight text-zinc-100"
+            >
+                Now
+            </h1>
+            <p class="text-sm font-mono text-gold/60 uppercase tracking-widest">
+                Last Updated: {lastUpdated}
+            </p>
+        </header>
+
+        <div class="space-y-16">
+            <section>
+                <h2
+                    class="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6 border-b border-zinc-800 pb-2"
+                >
+                    Professional & Academic
+                </h2>
+                <ul class="space-y-4 text-zinc-400 leading-relaxed">
+                    <li>
+                        <span class="text-zinc-200">Focus:</span> Architecting a [Project
+                        Name] using Astro 6 and edge computing.
+                    </li>
+                    <li>
+                        <span class="text-zinc-200">Studying:</span> Diving deeper
+                        into [Academic Topic] for my final semester at [University].
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2
+                    class="text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6 border-b border-zinc-800 pb-2"
+                >
+                    Personal Synthesis
+                </h2>
+                <ul class="space-y-4 text-zinc-400 leading-relaxed">
+                    <li>
+                        <span class="text-zinc-200">Currently Reading:</span> [Book
+                        Title] — exploring how it relates to [Life Philosophy].
+                    </li>
+                    <li>
+                        <span class="text-zinc-200">Hobby:</span> Training for a [Race/Event]
+                        or mastering [Skill Name].
+                    </li>
+                </ul>
+            </section>
+
+            <section class="pt-8 border-t border-zinc-900">
+                <p class="text-xs text-zinc-600 italic">
+                    This is a <a
+                        href="https://nownownow.com/about"
+                        class="text-gold hover:underline">Now page</a
+                    >. If you have your own site, you should make one too.
+                </p>
+            </section>
+        </div>
+    </article>
+</BaseLayout>

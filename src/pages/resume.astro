@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Resume | Your Name">
+<BaseLayout title="Résumé | Tomis Hamilton">
     <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-16 mt-12">
         <aside class="space-y-16">
             <section>
@@ -14,21 +14,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <ul class="text-sm space-y-3 text-zinc-400">
                     <li>
                         <a
-                            href="mailto:hello@yoursite.com"
+                            href="mailto:tomisnhamilton@gmail.com"
                             class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >Email</a>
+                            >Email</a
+                        >
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/in/tomis-hamilton-428b471a8"
                             class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >LinkedIn</a>
+                            >LinkedIn</a
+                        >
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="https://github.com/tomisnhamilton"
                             class="hover:text-gold transition-colors border-b border-zinc-800 pb-1"
-                            >GitHub</a>
+                            >GitHub</a
+                        >
                     </li>
                 </ul>
             </section>
@@ -37,14 +40,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <h2
                     class="text-xs uppercase tracking-widest text-gold font-bold mb-6"
                 >
-                    Core Skills
+                    Technical Skills
                 </h2>
                 <ul class="text-sm space-y-2 text-zinc-400 font-mono">
-                    <li>Systems Design</li>
-                    <li>Technical Writing</li>
-                    <li>Curriculum Dev</li>
-                    <li>Public Speaking</li>
-                    <li>Astro / TS</li>
+                    <li>Rust / Python / C</li>
+                    <li>Java / JavaScript</li>
+                    <li>Linux / MacOS</li>
+                    <li>Ethical Hacking</li>
+                    <li>Video Editing</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2
+                    class="text-xs uppercase tracking-widest text-gold font-bold mb-6"
+                >
+                    Certifications
+                </h2>
+                <ul class="text-sm space-y-2 text-zinc-400 font-mono">
+                    <li>CompTIA Security+</li>
+                    <li>Cybersecurity Wings</li>
+                    <li>Solo Jump Wings</li>
                 </ul>
             </section>
         </aside>
@@ -54,7 +70,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <h2
                     class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8 border-b border-zinc-800 pb-2"
                 >
-                    Experience & Education
+                    Education
+                </h2>
+                <div class="relative pl-8 border-l border-zinc-800">
+                    <div class="absolute -left-[1px] top-0 w-[2px] h-6 bg-gold">
+                    </div>
+                    <span class="text-xs font-mono text-zinc-500 mb-1 block"
+                        >Expected May 2026</span
+                    >
+                    <h3 class="text-lg text-zinc-100 font-medium">
+                        B.S. Computer Science
+                    </h3>
+                    <p class="text-sm text-gold mt-1">U.S. Air Force Academy</p>
+                    <p class="text-sm text-zinc-500 mt-2">
+                        GPA: 3.28 | Focus in Cybersecurity.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2
+                    class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8 border-b border-zinc-800 pb-2"
+                >
+                    Professional & Leadership
                 </h2>
                 <div class="space-y-12">
                     <div
@@ -65,15 +103,109 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         >
                         </div>
                         <span class="text-xs font-mono text-zinc-500 mb-1 block"
-                            >2024 — Present</span
+                            >2025 — Present</span
                         >
                         <h3 class="text-lg text-zinc-100 font-medium">
-                            Senior Developer <span class="text-gold"
-                                >@ Studio</span>
+                            Founder <span class="text-gold"
+                                >@ Cyberbeans LLC</span
+                            >
                         </h3>
                         <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
-                            Bridging technical complexity with human-centric
-                            design.
+                            Developing full-stack applications with a focus on
+                            high-performance systems and individual privacy.
+                        </p>
+                    </div>
+
+                    <div
+                        class="relative pl-8 border-l border-zinc-800 hover:border-gold/40 transition-colors"
+                    >
+                        <span class="text-xs font-mono text-zinc-500 mb-1 block"
+                            >Fall 2025 — Present</span
+                        >
+                        <h3 class="text-lg text-zinc-100 font-medium">
+                            FalconNet (FN) Deputy Director <span
+                                class="text-gold">@ USAFA</span
+                            >
+                        </h3>
+                        <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
+                            Supervises FN cohort operations in developing
+                            innovative technical solutions to meet the needs and
+                            improve the quality of life of the USAFA Cadet Wing.
+                            Advises the FalconNet Director in critical decisions
+                            and chairs the FNC Selection Board.
+                        </p>
+                    </div>
+
+                    <div
+                        class="relative pl-8 border-l border-zinc-800 hover:border-gold/40 transition-colors"
+                    >
+                        <span class="text-xs font-mono text-zinc-500 mb-1 block"
+                            >Summer — Fall 2025</span
+                        >
+                        <h3 class="text-lg text-zinc-100 font-medium">
+                            Squadron Commander <span class="text-gold"
+                                >@ USAFA Support Group</span
+                            >
+                        </h3>
+                        <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
+                            Responsible for all cadet duty functions and
+                            activities within the Admin Squadron. Mentoring
+                            subordinates through the Leadership Growth Model to
+                            execute Wing goals.
+                        </p>
+                    </div>
+
+                    <div
+                        class="relative pl-8 border-l border-zinc-800 hover:border-gold/40 transition-colors"
+                    >
+                        <span class="text-xs font-mono text-zinc-500 mb-1 block"
+                            >Fall 2021 — Spring 2022</span
+                        >
+                        <h3 class="text-lg text-zinc-100 font-medium">
+                            Battalion Commander <span class="text-gold"
+                                >@ Riverside Military Academy (RMA)</span
+                            >
+                        </h3>
+                        <p class="text-sm text-zinc-400 mt-2 leading-relaxed">
+                            Acts as the senior cadet leader of RMA. Commands a
+                            Special Staff and Company Commanders in leading
+                            young men through formal education in an academic
+                            and military setting. Reports to the Commandant of
+                            Cadets and President of RMA..
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2
+                    class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-8 border-b border-zinc-800 pb-2"
+                >
+                    Selected Extracurriculars
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-zinc-200 font-medium">
+                            Cyber Team (Delogrand)
+                        </h4>
+                        <p class="text-xs text-zinc-500 mt-1">
+                            USAFA • 2022 — Present
+                        </p>
+                        <p class="text-sm text-zinc-400 mt-2">
+                            Practicing security exploitation and hardening to
+                            secure critical Air Force infrastructure.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-zinc-200 font-medium">
+                            FalconNet Innovation
+                        </h4>
+                        <p class="text-xs text-zinc-500 mt-1">
+                            Director • 2024 — 2025
+                        </p>
+                        <p class="text-sm text-zinc-400 mt-2">
+                            Led strategic training for 25+ members and managed
+                            the full stack of cadet-facing applications.
                         </p>
                     </div>
                 </div>
