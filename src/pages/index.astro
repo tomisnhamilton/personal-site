@@ -29,13 +29,13 @@ const isMaintenance = import.meta.env.PUBLIC_MAINTENANCE_MODE === "true";
     ) : (
         <BaseLayout title="T.N. Hamilton | Home">
             <section class="mt-16 mb-24">
-                <div class="flex items-center gap-20 mb-8">
+                <div class="flex items-center gap-8 md:gap-20 mb-8">
                     <img
                         src={myPhoto.src}
                         alt="Tomis Hamilton"
                         class="w-28 h-28 rounded-full object-cover border-2 border-zinc-800 shadow-xl"
                     />
-                    <h1 class="text-4xl font-semibold tracking-tight text-zinc-100">
+                    <h1 class="text-lg md:text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-100">
                         <span class="text-gold">Hi! </span>
                         I'm Tomis Hamilton
                     </h1>
