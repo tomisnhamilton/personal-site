@@ -52,6 +52,45 @@
     margin: 2rem 0;
 }
 
+/* Specific override for links within the blog article (prose) */
+.prose a {
+    color: #c49f41 !important; /* Force Gold */
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba(
+        196,
+        159,
+        65,
+        0.3
+    ); /* Transparent gold underline */
+    text-underline-offset: 4px;
+    transition: all 0.3s ease;
+}
+
+.prose a:hover {
+    text-decoration-color: #c49f41; /* Solid gold underline on hover */
+    background-color: rgba(
+        196,
+        159,
+        65,
+        0.1
+    ); /* Subtle gold highlight background */
+    border-radius: 2px;
+}
+
+/* Ensure the external link icon matches the new styling */
+.prose a[href^="http"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: super;
+    color: #c49f41;
+    opacity: 0.6;
+}
+
+.prose a[href^="http"]:hover::after {
+    opacity: 1;
+}
+
 /* 3. Utility classes for your Gold accent */
 .text-gold {
     color: #c49f41;
