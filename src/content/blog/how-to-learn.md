@@ -1,6 +1,6 @@
 ---
 title: "How to Learn in an AI Age"
-pubDate: 2026-03-12
+pubDate: 2026-03-15
 description: "How I'm still learning despite AI being everywhere"
 ---
 
@@ -18,9 +18,9 @@ I realized this for a while but failed to do anything about it. Once you use AI 
 
 ## My Approach
 
-Unfortunately, I'm pretty busy when it comes to school. USAFA doesn't take it easy on us. Since I don't have that much time to dedicate to a new hobby, I've started using AI to supplement my learning and programming. If the project is something that I want to learn and genuinely improve my proficiency in, I'll reference documentation, examples, videos, and other forms of media; try implementing a solution myself; and use AI when stuck to guide me in the right direction. Note how I said "guide," as I'm not looking to be given a solution. 
+Unfortunately, I'm pretty busy when it comes to school... USAFA doesn't take it easy on us. Since I don't have that much time to dedicate to a new hobby, I've started using AI to supplement my learning and programming. If the project is something that I want to learn and genuinely improve my proficiency in, I'll reference documentation, examples, videos, and other forms of media; try implementing a solution myself; and use AI when stuck to guide me in the right direction. Note how I said "guide," as I'm not looking to be given a solution. 
 
-For tasks that are a lot simpler or one-off alterations (e.g. modifying my computer configuration), I don't see an issue with using AI to get a quick solution. 
+For tasks that are a lot simpler or one-off alterations (e.g. modifying my computer configuration), I don't see an issue with using AI to get a quick solution. But, it's vital to engage in the material and struggle through it; get errors and try to resolve them without AI.
 
 What I've found to be most important is getting back into natural learning. My approach isn't perfect; sometimes, I'll find myself using AI more than I should or will be given a solution due to a hallucination. However, I know that the more I practice learning, the better I'll get at it.
 
