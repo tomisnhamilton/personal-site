@@ -1,6 +1,6 @@
 ---
 title: "How to Learn in an AI Age"
-pubDate: 2026-03-15
+pubDate: 2026-03-21
 description: "How I'm still learning despite AI being everywhere"
 ---
 
