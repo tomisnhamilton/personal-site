@@ -91,6 +91,61 @@
     opacity: 1;
 }
 
+/* Footnote superscript refs (e.g. [^1] inline) */
+.prose [data-footnote-ref] {
+    color: #c49f41;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba(196, 159, 65, 0.3);
+    text-underline-offset: 2px;
+    font-size: 0.75em;
+    vertical-align: super;
+    line-height: 0;
+    transition: all 0.3s ease;
+}
+
+.prose [data-footnote-ref]:hover {
+    text-decoration-color: #c49f41;
+}
+
+/* Footnote definitions section at the bottom */
+.prose .footnotes {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #27272a;
+}
+
+.prose .footnotes ol {
+    padding-left: 1.25rem;
+}
+
+.prose .footnotes li {
+    font-size: 0.8rem;
+    color: #71717a; /* slightly greyer than body text */
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.prose .footnotes li p {
+    color: #71717a;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+/* Back-reference arrow at end of each footnote */
+.prose [data-footnote-backref] {
+    color: #c49f41;
+    text-decoration: none;
+    font-size: 0.85em;
+    margin-left: 0.25rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.prose [data-footnote-backref]:hover {
+    opacity: 1;
+}
+
 /* 3. Utility classes for your Gold accent */
 .text-gold {
     color: #c49f41;

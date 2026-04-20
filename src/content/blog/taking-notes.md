@@ -25,4 +25,4 @@ I can ramble on about my recommendations, but the important thing is to just sta
 
 
 
-[1]: Any apparently useless activity which, by allowing one to overcome intermediate difficulties, allows one to solve a larger problem. ([source](https://en.wiktionary.org/wiki/yak_shaving))
+[^1]: yak-shaving – Any apparently useless activity which, by allowing one to overcome intermediate difficulties, allows one to solve a larger problem. ([source](https://en.wiktionary.org/wiki/yak_shaving))
